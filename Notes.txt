@@ -1,0 +1,387 @@
+Statistics is discipline of Analyzing data.
+Descriptive and Inference :
+Descriptive : Exploratory Data Analysis,Clustering..
+Inference : Making conclusions from samples.
+e.g:Counting set of people..
+1)Quantitative Data or Numerical
+2)Qualitative Data or Categorical
+
+Qualitative Data or Categorical -->Nominal and Ordinal
+Provides information about the quality of an object..
+e.g:Good,Average or Poor..
+
+Nominal -->No Numeric Value --> Blood Group - ->A,B,O+
+        -->Gender male,female..
+I cannot perform any of my mathematical operations..
+Count can be possible..(Mode)...
+
+Ordinal data-->In addition to possesing properties,it can also be 
+naturally ordered.They can be arranged in a sequence of increasing or decreasng order
+
+e.g:Customer Satisfaction -->Good,Not bad,Very Bad,Very Happy..
+Grades - A,B,C.
+
+I can also go for count of occurances along 
+with Median and quartiles..
+
+Quantitative/Numeric -->Interval,and Ratio..
+Numeric data for whichnot have only the order is known but also the exact difference is known..
+Intervel data -->Temperature difference ..(Mathematical operations and also the 
+central tendency can be measured -->Mean..
+
+Ratio-->Numeric data for which the exact value can be measured.Standard Deviation,Variance,Mean.
+
+Nominal and Ordinal attributes are Discrete.
+Interval and ratio attributes are Continuous..
+
+Variance -->(Summation of each value - mean of data)^2
+	    -----------------------------------------	
+                          n(no of values)
+
+Std = sqrt of variance..
+
+Poisson Distribution:It is used to calculate the number of events that
+that might occur in a continuous(fixed) time interval..
+
+Uber..to match the drivers to customers..
+
+PMF -> exponential power of (-lambda) * lambda pow(k)
+       ----------------------------------------------
+                          factorial(k)
+e --> 2.71
+lambda(Avng no of events per interval)
+k - probabiltiy of observing the events in an interval
+
+P(x,U(Mean)) -->avng no of homes Mean (2)
+             exactly 3 homes tomorrow?
+           x = 3
+
+      	     e^-2 * 2^3      
+P(3;2)       ------------   -->0.18
+                3!
+
+
+For example, in 1946 the British statistician R.D. Clarke published "An Application of the Poisson Distribution," 
+in which he disclosed his analysis of the distribution of hits of flying bombs (V-1 and V-2 missiles) in London 
+during World War II. 
+Some areas were hit more often than others. The British military wished to 
+know if the Germans were targeting these districts 
+(the hits indicating great technical precision) or if the distribution was due to chance. 
+If the missiles were in fact only randomly targeted (within a more general area), 
+the British could simply disperse important installations to decrease the likelihood of their being hit.
+
+
+Clarke began by dividing an area into thousands of tiny, equally sized plots. Within each of these, 
+it was unlikely that there would be even one hit, let alone more. Furthermore, under the assumption that the missiles
+fell randomly, the chance of a hit in any one plot would be a constant across all the plots.
+Therefore, the total number of hits would be much like the number of 
+wins in a large number of repetitions of a game of chance with a very small probability of winning. 
+This sort of reasoning led Clarke to a formal derivation of the Poisson distribution as a model.
+
+
+Probability Mass Function:It is a function that gives the probability that a discrete random variable is 
+exactly equal to some value.
+
+A discrete variable is a variable whose value is obtained by counting. 
+A continuous variable is a variable whose value is obtained by measuring.
+
+Binomial Distribution : Only two outcomes are possible..
+
+A binomial experiment is a statistical experiment that has the following properties:
+
+The experiment consists of n repeated trials.      ---->We flip a coin 2 times
+Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure.
+---- head or tail
+The probability of success, denoted by P, is the same on every trial. --0.5 on evert trial
+The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials.----  getting heads on one trial does not affect whether we get heads on other trials.
+
+Notation :
+
+
+The following notation is helpful, when we talk about binomial probability.
+
+x: The number of successes that result from the binomial experiment.
+n: The number of trials in the binomial experiment.
+P: The probability of success on an individual trial.
+Q: The probability of failure on an individual trial. (This is equal to 1 - P.)
+n!: The factorial of n (also known as n factorial).
+b(x; n, P): Binomial probability - the probability that an n-trial binomial experiment results in exactly x successes, 
+when the probability of success on an individual trial is P.
+nCr: The number of combinations of n things, taken r at a time.
+
+Probability of getting exact 2 fours when a dice is tossed 5 times?
+
+b(x; n, P) = nCx * Ppow(x) * (1 - P)pow(n - x)
+
+b(2; 5, 0.167) = 5C2 * (0.167)2 * (0.833)3    -->0.139
+
+Multinomial Distribution : A binomial experiment is a special case of a multinomial experiment.
+Here is the main difference. With a binomial experiment, each trial can result in two - and only two - possible outcomes.
+With a multinomial experiment, each trial can have two or more possible outcomes.
+
+Thus it is the probability distribution of the outcomes from a multinomial experiment.
+
+It has the following principles:
+
+The experiment consists of n repeated trials.
+Each trial has a discrete number of possible outcomes.
+On any given trial, the probability that a particular outcome will occur is constant.
+The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials.
+Consider the following statistical experiment. You toss two dice three times, and record the outcome on each toss. 
+This is a multinomial experiment because:
+
+The experiment consists of repeated trials. We toss the dice three times.
+Each trial can result in a discrete number of outcomes - 2 through 12.
+The probability of any outcome is constant; it does not change from one toss to the next.
+The trials are independent; that is, getting a particular outcome on one trial does not affect 
+the outcome on other trials.
+
+Multinomial Formula. Suppose a multinomial experiment consists of n trials, 
+and each trial can result in any of k possible outcomes: E1, E2, . . . , Ek. 
+Suppose, further, that each possible outcome can occur with probabilities p1, p2, . . . , pk. 
+Then, the probability (P) that E1 occurs n1 times, E2 occurs n2 times, . . . , and Ek occurs nk times is:
+
+P = [ n! / ( n1! * n2! * ... nk! ) ] * ( p1n1 * p2n2 * . . . * pknk )
+
+where n = n1 + n2 + . . . + nk.
+
+Suppose a card is drawn randomly from an ordinary deck of playing cards, and then put back in the deck. 
+This exercise is repeated five times. What is the probability of drawing 1 spade, 1 heart, 1 diamond, and 2 clubs?
+
+Solution: To solve this problem, we apply the multinomial formula. We know the following:
+
+The experiment consists of 5 trials, so n = 5.
+The 5 trials produce 1 spade, 1 heart, 1 diamond, and 2 clubs; so n1 = 1, n2 = 1, n3 = 1, and n4 = 2.
+On any particular trial, the probability of drawing a spade, heart, diamond, or club is 0.25, 0.25, 0.25, and 0.25, respectively.
+Thus, p1 = 0.25, p2 = 0.25, p3 = 0.25, and p4 = 0.25.
+We plug these inputs into the multinomial formula, as shown below:
+
+P = [ n! / ( n1! * n2! * ... nk! ) ] * ( p1n1 * p2n2 * . . . * pknk )
+
+P = [ 5! / ( 1! * 1! * 1! * 2! ) ] * [ (0.25)1 * (0.25)1 * (0.25)1 * (0.25)2 ]
+
+P = 0.05859
+
+(Gaussian)Normal Distribution :The normal distribution refers to a family of continuous probability 
+distributions described by the normal equation.
+
+The Normal Equation. The value of the random variable Y is:
+
+Y = { 1/[ σ * sqrt(2π) ] } * e-(x - μ)2/2σ2
+
+where X is a normal random variable, μ is the mean, σ is the standard deviation, 
+π is approximately 3.14159, and e is approximately 2.71828.
+
+The Normal Curve
+The graph of the normal distribution depends on two factors - the mean and the standard deviation. 
+The mean of the distribution determines the location of the center of the graph, 
+and the standard deviation determines the height and width of the graph. 
+All normal distributions look like a symmetric, bell-shaped curve
+
+When the standard deviation is small, the curve is tall and narrow; and when the standard deviation is big, 
+the curve is short and wide.
+
+An average light bulb manufactured by the Philips lasts 300 days with a standard deviation of 50 days.
+Assuming that bulb life is normally distributed, what is the probability that an Philips light bulb will last
+at most 365 days?
+
+Solution: Given a mean score of 300 days and a standard deviation of 50 days, 
+we want to find the cumulative probability that bulb life is less than or equal to 
+365 days. Thus, we know the following:
+
+The value of the normal random variable is 365 days. -x 
+The mean is equal to 300 days. - (mean)
+The standard deviation is equal to 50 days. (std)
+
+P( X < 365) = 0.90.
+
+Probability Density Function:
+
+Most often, the equation used to describe a continuous probability distribution is called a probability density function .
+Sometimes, it is referred to as a density function, a PDF, or a pdf. For a continuous probability distribution, the density function has the following properties:
+
+Since the continuous random variable is defined over a continuous range of values (called the domain of the variable), 
+the graph of the density function will also be continuous over that range.
+The area bounded by the curve of the density function and the x-axis is equal to 1, when computed over the domain of the variable.
+The probability that a random variable assumes a value between a and b is equal to the area under the density function bounded by a and b.
+
+
+"Herbert Simon" -->Machines will be capable,within 20 years of doing any work human can do..(1965)
+
+Netflix Competition 2006 with One Million Dollar he has asked to improve its recommendation system 10% using ML..
+
+Machine Learning Landscape: Input,Processing,Output.
+
+Input (Sequence of alphanumeric symbols presented and stored as per some given set of policies) -->Traditional Programming
+
+Input(Image,Audio or data) -->Machine Learning
+
+Processing (It is about manipulation of stored symbols by a set of predefined algorithms) -->Traditional Programming.
+
+Processing (Knowledge demonstration and representation,Pattern Matching,Search operations,Logical,Learning) -->Machine Learning..
+
+Output (Series of alphanumeric data,might be given in a set of colors,which symbolises the result of processing (CRT,Paper or Magnetic Disk)
+
+Output (Summary of the Statistical and Mathematical functions where you unearth the insights)
+
+Elements of Machine Learning :
+
+->Comprehending the problem  ->Gathering the data  ->Exploring the data  
+->Identifying the method of learning  
+->Selecting the appropriate algorithm  ->Analysing the results..
+
+Machine Learning Cycle :
+
+->Planning  -->Defining Goals
+            -->Developing Project Charter
+
+->Data Preparation -->Data Retrieval
+                   -->Data Cleansing
+                   -->Data Exploration
+                   -->Data Refining
+
+-->Modelling  -->Model Creation (Creating train and test data)
+              -->Model validation
+              -->Model Evaluation (finds the best predicted model that signifies our objective)
+                 Hold-Out method and Crossvalidation method
+		Holdout(large dataset into randomly divided three subsets)
+                ->Training set is a subset of the dataset used to build predictive models
+                ->Validation set is a subset of datset used to assess the performance of the model built in the training phase.
+                ->Testing set or unseen examples are a subset of dataset to access the likely future performance.
+		Cross-Validation ->when only a limited data is available.
+
+-->Model Presentation -->Present and Deployment 
+                      -->Revisit Model
+ 		      -->Automate the data analysis..
+
+
+Types of Machine Learning Systems:
+
+->Whether or not they are trained with Human Supervision (Supervised,Unsupervised,Reinforcement Learning)
+
+->Whether or not they can  learn incrementally on the fly(Online Learing vs Batch Learning)
+
+->Whether they simply work by comparing new data points to known data points(Instance based vs Model based learning)
+
+Feature :Attribute (or a field) which is useful in data science process..
+
+E.g:Computer Vision techniques -->images,pixels,edges,corners etc.,
+Speech Recognition -->Sound levels,Noise levels etc...,
+
+Feature Engineering : Make simple model to perform much better than complex model
+
+->Reduce the model selection time 
+
+->Reduce the training time by simplfying the model.
+
+Challenges in Machine Learning : 
+
+->Insufficient Quantity of training data.
+
+->Poor Quality data..
+
+->Irrelevant features.(feature engineering)[Feature Selection,Feature Extraction]
+
+->Overfitting training data(Regularization,Tuning the parameters)
+
+->Underfitting data.(Feeding out the better features)
+
+->Testing and Validating (cross-validation)
+
+
+Scikit-Learn (remarkable well designed API) -->Main Design Principles:
+
+->Consistency -->Estimators [some parameter based on dataset] fit() method[dataset only as a parameter]
+              -->Transformers [transform datset] transform() & fit_transform() (fit() and transform() but runs faster]
+	      -->Predictors [capable of making predictions on given dataset predict() method]
+
+->Inspection [Estimator based parameters how the data is changing accordingly]
+
+->Nonproliferation of classes [Numpy array or sparse matrices,hyperparameters are just python strings or numbers]
+
+->Composition [Using the existing building blocks (Pipeline Estimator)
+
+->Sensible defaults [default values,making it easy to create a basline]
+
+1)Handling Text and Categorical Attributes:
+
+Label Encoder [Convert text labels to numbers]
+OneHotEncoder [Cnvert Integer categorical values into onehot vectors] -Multinomial Distribution
+LabelBinarizer [both text to integer categories and vice versa]
+
+2)Custom Transformers [fit(),transform() and fit_transform()]
+
+3)Feature Scaling [Get all the attributes in the same scale -->min-max scaling and standardization.
+
+Min-max ->subtracting the min value and dividing by the max minus the min.
+
+Xnew = (X(i) - min(X))/max(X) - min(X)  [Normalization]
+
+Z-Score Normalization -->This is preferred when the data contains outlier.In the presence of outlier,
+values move closer to zero as range increases.Z-Score follows the principle of statistics and moves the 
+data to mean zero and standard deviation to one.
+
+Z = (X-mean(X))/StdDev(X)
+
+Standardization ->Subtracts the mean value and then divides with the variance (so that the result has 
+unit variance),Unlike MinMax scaling,standardization doesn't bound values to a specific range.
+Scikit-learn provides a transformer called "StandardScaler"
+
+Train data -->It used for making the model to learn.
+Test data -->It is used to validate the model.
+
+4)Transformation Pipelines [many data transformation steps in right order] Pipepline..
+
+5)Splitting the training and testing data -->train_test_split()
+
+6)Better evalution using Crossvalidation (cross_val_score)
+
+7)Tuning the model (GridSearch,Ensemble models)
+
+8)Cost Function (measures the extent to which the model is going wrong in estimating the relationship between dependent and 
+                 independent variables )
+  Loss Function (loss function defined on datapoint whereas cost function for entire training dataset)
+
+9)Launch,Deploy and maintain the system...
+
+
+Data Quality:Success of machine learning depends largely on the quality of data.
+Data which has right quality helps to achieve better prediction and accuracy.
+
+->Incorrect sample set selection   ->Errors in data collection(resulting in outliers and missing values)
+
+Knowledge of samples + known uncertainty => Useful knowledge..
+
+Probabilty = Number of possible outcomes / total number of outcomes..
+
+0 < P(A) < 1 
+
+Probabilty of union of two sets :
+
+Two events A and B are mutually exclusive if they can't happen together.
+
+P(A U B) = P(A) + P(B) - p(A (intersection) B) 
+ 
+         = P(A) + P(B) as the events are mutually exclusive.
+
+Joint Probability : (Product rule)
+
+P(A,B) = P(A (intersection) B)  = P(A|B).P(B) 
+                                  (Conditional Probability)
+
+1000 toy parts and 25 defective,If two random samples are selcted for testing without replacement,what is the probability that both the samples are defective.
+
+Let A denotes the probability of first being defective and B deontes the second part being defective.
+
+p(A) = 25/1000 = 0.025
+
+p(B|A) = 24/999 = 0.024
+
+p(A,B) = p(B|A)p(A)
+
+      = 0.024*0.025
+      = 0.0006
+
+
+
+
