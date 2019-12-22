@@ -1,0 +1,164 @@
+
+It is crucial to use a training set that is representative of the cases 
+we want to generalize to.
+This is often harder than it sounds;
+if the sample is too small,we will have a sampling noise
+(i.e.,nonrepresentative data as a result of chance),but even very large 
+samples can be non representative 
+if the sampling method is flawed.This is called "sampling bias".
+
+Famous example of sampling bias:US Presiditial Elections 1936 Roosevelt and Landon.
+Literary Digest poll 10Million people mail 2.4Million responses.
+57%Landon 62%Roosevelt.
+
+-->Poor Quality of data:If the training data is full of outliers,
+and noise (due to poor quality measurements),it will make harder for the system 
+to detect the underlying patterns.
+
+-->Irrelevant features:Good set of features to train--Feature Engineering
+
+Overfitting - Model performs well on the training data,but it doesnot generalize 
+well.
+Complex models such as Deep Neural networks can detect subtle patterns in the data,
+but if the training set is noisy,or if it is too small
+(which introduces sampling noise)
+then the model is likely to detect patterns in the noise itself.
+Obviously these patterns will not generalize to new instances.
+
+Underfitting:When the model is too simple to learn the underlying structure 
+of the data.The main options to fix this problem are :
+Selecting a powerful model,with more parameters.
+Feeding better features to the learning algorithm.
+Reducing the constraints on the model.
+
+To avoid "wasting" too much training data in validation sets, 
+a common technique is to use cross-validation.The training set is split
+into complimentary subsets and each model 
+is trained against a different combinations of 
+these subsets and validated against the remaining parts.
+
+Bias and Variance:
+
+Bias :This part of generalization is due to wrong assumptions,assuming linear data which is actuallty quadratic.
+A high bias model is most likely to underfit the data.
+
+Variance:This part is due to model's excessive sensitivity to small variations in the training data.
+A model with many degrees of freedom(such as high-degree polynomial) is likely to have high varaince.
+Which results in overfitting the data.
+
+Ridge Regression Cost function:
+
+J(theta) = MSE(theta) + (alpha)1/2(summation)i=1 to n(theta(i)^2)
+alpha is hyperparameter..
+
+(Theta) = (X(transpose).X + (alpha)A)inverse .X(transpose).y
+solver (A) -->Cholesky
+
+Lower Triangular Matrix -->[L00  0   0
+                            L10  L11 0
+                            L20  L21 L22]  
+[1 0 0
+3 5 0              ->A = L.L(Transpose) [Cholesky]  (L - Lower Triangular matrix]
+2 4 5]
+
+Upper Triangular matrix --> [L00  L01 L02
+                              0   L11 L12
+                              0    0  L22]
+
+Cost Function for Lasso Regression:
+
+J(theta) = MSE(theta) + (alpha)summation(i =1 to n)|theta(i)|
+
+Cost function of ElasticNet Regression:
+
+J(theta) = MSE(theta) + r(alpha)summation(i =1 to n)|theta(i)| 
+                      + 1-r (alpha)(summation)i=1 to n(theta(i)^2)
+                       -----
+                        2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
