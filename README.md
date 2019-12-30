@@ -1,1 +1,1 @@
-Machine Learning starting with Daa Analysis 
+Machine Learning starting with Data Analysis which includes basic statistical concepts also..
